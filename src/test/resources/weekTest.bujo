@@ -1,0 +1,70 @@
+{
+  "name" : "Week Test",
+  "days" : [ {
+    "day" : "SUNDAY",
+    "events" : [ ],
+    "tasks" : [ {
+      "name" : "task2",
+      "description" : "",
+      "day" : "Sunday",
+      "completed" : "false"
+    } ]
+  }, {
+    "day" : "MONDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "TUESDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "WEDNESDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "THURSDAY",
+    "events" : [ ],
+    "tasks" : [ {
+      "name" : "task3",
+      "description" : "",
+      "day" : "Thursday",
+      "completed" : "false"
+    } ]
+  }, {
+    "day" : "FRIDAY",
+    "events" : [ {
+      "name" : "event1",
+      "description" : "",
+      "day" : "Friday",
+      "start-time" : "12:00",
+      "duration" : "3"
+    } ],
+    "tasks" : [ ]
+  }, {
+    "day" : "SATURDAY",
+    "events" : [ ],
+    "tasks" : [ {
+      "name" : "task1",
+      "description" : "",
+      "day" : "Saturday",
+      "completed" : "false"
+    } ]
+  } ],
+  "task-queue" : [ {
+    "name" : "task1",
+    "description" : "",
+    "day" : "Saturday",
+    "completed" : "false"
+  }, {
+    "name" : "task2",
+    "description" : "",
+    "day" : "Sunday",
+    "completed" : "false"
+  }, {
+    "name" : "task3",
+    "description" : "",
+    "day" : "Thursday",
+    "completed" : "false"
+  } ],
+  "note" : "note test"
+}

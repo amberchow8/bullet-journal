@@ -1,0 +1,82 @@
+{
+  "name" : "New Week",
+  "task-max" : 5,
+  "event-max" : 5,
+  "theme-options" : [ {
+    "name" : "neon"
+  }, {
+    "name" : "ocean"
+  }, {
+    "name" : "forest"
+  } ],
+  "current-theme" : {
+    "name" : "neon"
+  },
+  "days" : [ {
+    "day" : "SUNDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "MONDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "TUESDAY",
+    "events" : [ ],
+    "tasks" : [ {
+      "name" : "cook",
+      "description" : "",
+      "day" : "Tuesday",
+      "completed" : "false"
+    } ]
+  }, {
+    "day" : "WEDNESDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "THURSDAY",
+    "events" : [ ],
+    "tasks" : [ {
+      "name" : "clean",
+      "description" : "",
+      "day" : "Thursday",
+      "completed" : "false"
+    } ]
+  }, {
+    "day" : "FRIDAY",
+    "events" : [ {
+      "name" : "class",
+      "description" : "",
+      "day" : "Friday",
+      "start-time" : "12:00",
+      "duration" : "2"
+    } ],
+    "tasks" : [ ]
+  }, {
+    "day" : "SATURDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  } ],
+  "task-queue" : [ {
+    "name" : "cook",
+    "description" : "",
+    "day" : "Tuesday",
+    "completed" : "false"
+  }, {
+    "name" : "clean",
+    "description" : "",
+    "day" : "Thursday",
+    "completed" : "false"
+  }, {
+    "name" : "cook",
+    "description" : "",
+    "day" : "Tuesday",
+    "completed" : "false"
+  }, {
+    "name" : "clean",
+    "description" : "",
+    "day" : "Thursday",
+    "completed" : "false"
+  } ],
+  "note" : ":)"
+}

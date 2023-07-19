@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.PerspectiveCamera?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <root>
+      <AnchorPane prefHeight="750.0" prefWidth="1000.0">
+         <children>
+            <VBox layoutX="-3.0" prefHeight="750.0" prefWidth="1053.0">
+               <children>
+                  <BorderPane prefHeight="750.0" prefWidth="1000.0">
+                     <center>
+                        <HBox prefHeight="500.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <StackPane prefHeight="600.0" prefWidth="1000.0">
+                                 <children>
+                                    <GridPane fx:id="daysGrid" alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-style: dashed;" GridPane.columnIndex="2">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="4">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="5">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000; -fx-border-style: dashed;" GridPane.columnIndex="6">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="3">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="35.0" right="35.0" />
+                                 </HBox.margin>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                     </center>
+                     <bottom>
+                        <HBox fx:id="taskQueue" maxWidth="650.0" minWidth="650.0" prefHeight="100.0" prefWidth="624.0" style="-fx-border-color: #000000; -fx-background-color: #FDFEC6;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="taskQName" alignment="CENTER" contentDisplay="CENTER" minWidth="75.0" prefHeight="30.0" prefWidth="50.0" text="Tasks" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Dubai Regular" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <GridPane fx:id="taskList" maxHeight="70.0" maxWidth="605.0" prefHeight="70.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="70.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="70.0" minHeight="50.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <HBox.margin>
+                                    <Insets left="-60.0" top="30.0" />
+                                 </HBox.margin>
+                              </GridPane>
+                              <HBox minWidth="400.0" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FFEFB5; -fx-border-color: #000000; -fx-border-style: dotted;">
+                                 <HBox.margin>
+                                    <Insets left="1.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="74.0" text="Quotes" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Dubai Regular" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="addQuote" mnemonicParsing="false" text="Add note/quote">
+                                       <HBox.margin>
+                                          <Insets left="15.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Label fx:id="note">
+                                       <HBox.margin>
+                                          <Insets left="-175.0" top="45.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets right="400.0" />
+                           </BorderPane.margin>
+                        </HBox>
+                     </bottom>
+                     <top>
+                        <VBox prefHeight="150.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #EED6FF;">
+                                 <children>
+                                    <Label fx:id="weekName" alignment="CENTER" prefHeight="62.0" prefWidth="214.0" text="This Week" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Rage Italic" size="43.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="400.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button fx:id="newEvent" mnemonicParsing="false" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: #D8BFD8;" text="New Event" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Dubai Regular" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-600.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="newTask" mnemonicParsing="false" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #D8BFD8;" text="New Task" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Dubai Regular" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="-105.0" top="55.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="save" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" style="-fx-background-color: #D8BFD8;" text="Save" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Dubai Regular" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Group>
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Group>
+                                    <Button fx:id="weekOverview" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #D8BFD8;" text="Week Overview">
+                                       <HBox.margin>
+                                          <Insets left="-75.0" top="55.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Dubai Regular" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <ImageView fx:id="icon" fitHeight="90.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Button fx:id="delete" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #D8BFD8;" text="Task Delete">
+                                       <HBox.margin>
+                                          <Insets left="275.0" top="35.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Dubai Regular" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <MenuButton fx:id="urlpicker" mnemonicParsing="false" prefHeight="22.0" prefWidth="116.0" style="-fx-background-color: #D8BFD8;" text="MenuButton">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Action 1" />
+                                          <MenuItem mnemonicParsing="false" text="Action 2" />
+                                       </items>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="35.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Dubai Regular" size="12.0" />
+                                       </font>
+                                    </MenuButton>
+                                    <Button fx:id="delete1" mnemonicParsing="false" prefHeight="29.0" prefWidth="102.0" style="-fx-background-color: #D8BFD8;" text="Event Delete">
+                                       <font>
+                                          <Font name="Dubai Regular" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="25.0" top="30.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <GridPane prefHeight="48.0" prefWidth="1054.0" style="-fx-border-style: dashed;">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="25.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" minHeight="25.0" prefHeight="50.0" prefWidth="150.0" text="Sunday">
+                                       <font>
+                                          <Font name="Dubai Regular" size="20.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label alignment="CENTER" minHeight="25.0" prefHeight="50.0" prefWidth="150.0" text="Monday" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Dubai Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" minHeight="25.0" prefHeight="50.0" prefWidth="150.0" text="Tuesday" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Dubai Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" minHeight="25.0" prefHeight="50.0" prefWidth="150.0" text="Wednesday" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font name="Dubai Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" minHeight="25.0" prefHeight="50.0" prefWidth="150.0" text="Thursday" GridPane.columnIndex="4">
+                                       <font>
+                                          <Font name="Dubai Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" minHeight="25.0" prefHeight="50.0" prefWidth="150.0" text="Friday" GridPane.columnIndex="5">
+                                       <font>
+                                          <Font name="Dubai Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" minHeight="25.0" prefHeight="50.0" prefWidth="150.0" text="Saturday" GridPane.columnIndex="6">
+                                       <font>
+                                          <Font name="Dubai Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="35.0" right="35.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                              <AmbientLight color="CHARTREUSE" lightOn="true" />
+                              <PerspectiveCamera />
+                           </children>
+                        </VBox>
+                     </top>
+                  </BorderPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </root>
+</Scene>

@@ -1,0 +1,21 @@
+{
+  "name" : "hello",
+  "task-max" : 5,
+  "event-max" : 5,
+  "theme-options" : [ ],
+  "current-theme" : {
+    "name" : "neon"
+  },
+  "days" : [ {
+    "day" : "SUNDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  } ],
+  "task-queue" : [ {
+    "name" : "name",
+    "description" : "desc",
+    "day" : "Monday",
+    "completed" : "true"
+  } ],
+  "note" : "note"
+}
