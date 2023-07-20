@@ -1,0 +1,54 @@
+{
+  "name" : "Hello",
+  "task-max" : 5,
+  "event-max" : 5,
+  "theme-options" : [ "NONE", "NEON", "FOREST", "OCEAN" ],
+  "current-theme" : "OCEAN",
+  "days" : [ {
+    "day" : "SUNDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "MONDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "TUESDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "WEDNESDAY",
+    "events" : [ ],
+    "tasks" : [ {
+      "name" : "Task 1",
+      "description" : "",
+      "day" : "Wednesday",
+      "completed" : "false"
+    } ]
+  }, {
+    "day" : "THURSDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "FRIDAY",
+    "events" : [ {
+      "name" : "Event 1",
+      "description" : "",
+      "day" : "Friday",
+      "start-time" : "10:00",
+      "duration" : "1"
+    } ],
+    "tasks" : [ ]
+  }, {
+    "day" : "SATURDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  } ],
+  "task-queue" : [ {
+    "name" : "Task 1",
+    "description" : "",
+    "day" : "Wednesday",
+    "completed" : "false"
+  } ],
+  "note" : "This is your first note :)"
+}
