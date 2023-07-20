@@ -22,7 +22,7 @@ public class JsonUtilsTest {
   @Test
   public void testSerializeRecord() {
     WeekJson weekJson = new WeekJson("hello", 5, 5, new ArrayList<>(),
-        new ThemeJson("neon"), new ArrayList<>(
+        "NEON", new ArrayList<>(
             List.of(new DayJson(DayType.SUNDAY, new ArrayList<>(), new ArrayList<>()))),
         new ArrayList<>(
             List.of(new TaskJson(
@@ -35,19 +35,31 @@ public class JsonUtilsTest {
    */
   @Test
   public void testDeserializeJsonString() {
-    WeekJson weekJson = new WeekJson("hello", 5, 5, new ArrayList<>(),
-        new ThemeJson("neon"), new ArrayList<>(
+    WeekJson weekJson = new WeekJson("Hello", 5, 5, new ArrayList<>(),
+        "NEON", new ArrayList<>(
         List.of(new DayJson(DayType.SUNDAY, new ArrayList<>(), new ArrayList<>()))),
         new ArrayList<>(
             List.of(new TaskJson(
-                "name", "desc", "Monday", "true"))), "note");
-    String str = "{\n"
-        + "  \"name\" : \"hello\",\n  \"task-max\" : 5,\n  \"event-max\" : 5,\n"
-        + "  \"theme-options\" : [ ],\n  \"current-theme\" : {\n    \"name\" : \"neon\"\n"
-        + "  },\n  \"days\" : [ {\n    \"day\" : \"SUNDAY\",\n    \"events\" : [ ],\n"
-        + "    \"tasks\" : [ ]\n  } ],\n  \"task-queue\" : [ {\n    \"name\" : \"name\",\n"
-        + "    \"description\" : \"desc\",\n    \"day\" : \"Monday\",\n"
-        + "    \"completed\" : \"true\"\n  } ],\n  \"note\" : \"note\"\n}";
+                "Task 1", "", "Monday", "true"))), "note");
+    String str = "{\n" +
+            "  \"name\" : \"Hello\",\n" +
+            "  \"task-max\" : 5,\n" +
+            "  \"event-max\" : 5,\n" +
+            "  \"theme-options\" : [  ],\n" +
+            "  \"current-theme\" : \"NEON\",\n" +
+            "  \"days\" : [ {\n" +
+            "    \"day\" : \"SUNDAY\",\n" +
+            "    \"events\" : [ ],\n" +
+            "    \"tasks\" : [ ]\n" +
+            "  } ],\n" +
+            "  \"task-queue\" : [ {\n" +
+            "    \"name\" : \"Task 1\",\n" +
+            "    \"description\" : \"\",\n" +
+            "    \"day\" : \"Monday\",\n" +
+            "    \"completed\" : \"true\"\n" +
+            "  } ],\n" +
+            "  \"note\" : \"note\"\n" +
+            "}";
     assertEquals(weekJson, JsonUtils.deserializeJsonString(str));
   }
 

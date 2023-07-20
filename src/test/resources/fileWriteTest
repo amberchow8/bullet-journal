@@ -3,9 +3,7 @@
   "task-max" : 5,
   "event-max" : 5,
   "theme-options" : [ ],
-  "current-theme" : {
-    "name" : "neon"
-  },
+  "current-theme" : "NEON",
   "days" : [ {
     "day" : "SUNDAY",
     "events" : [ ],

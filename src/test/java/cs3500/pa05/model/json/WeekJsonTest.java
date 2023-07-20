@@ -49,7 +49,7 @@ class WeekJsonTest {
     DayJson day1 = new DayJson(DayType.SATURDAY, events, tasks2);
     days.add(day1);
     week = new WeekJson("test", 5, 5, new ArrayList<>(),
-        new ThemeJson("neon"), days, tasks, "testing");
+        "NEON", days, tasks, "testing");
   }
 
   /**
