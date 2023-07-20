@@ -16,103 +16,102 @@
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <AnchorPane prefHeight="200" prefWidth="200">
       <children>
-         <AnchorPane layoutX="6.0" prefHeight="750.0" prefWidth="1000.0">
+         <VBox prefHeight="750.0" prefWidth="1000.0">
             <children>
-               <VBox layoutX="-2.0" layoutY="2.0" prefHeight="746.0" prefWidth="998.0">
+               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="130.0" prefWidth="998.0" text="Week Settings">
+                  <font>
+                     <Font size="47.0" />
+                  </font>
+                  <padding>
+                     <Insets top="30.0" />
+                  </padding>
+               </Label>
+               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0" prefWidth="998.0" text="To keep fields as previous/default, leave them blank and hit &quot;Save Settings&quot;">
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+                  <padding>
+                     <Insets bottom="20.0" />
+                  </padding>
+               </Label>
+               <GridPane prefHeight="516.0" prefWidth="998.0">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.27703857421875" minWidth="10.0" prefWidth="370.32464599609375" />
+                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="664.4397277832031" minWidth="10.0" prefWidth="627.6753540039062" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints maxHeight="128.31849670410156" minHeight="10.0" prefHeight="128.31849670410156" vgrow="SOMETIMES" />
+                   <RowConstraints maxHeight="160.48733520507812" minHeight="10.0" prefHeight="114.54452514648438" vgrow="SOMETIMES" />
+                   <RowConstraints maxHeight="192.7198486328125" minHeight="10.0" prefHeight="117.66229248046875" vgrow="SOMETIMES" />
+                     <RowConstraints maxHeight="127.9969482421875" minHeight="10.0" prefHeight="120.33770751953125" vgrow="SOMETIMES" />
+                 </rowConstraints>
                   <children>
-                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="130.0" prefWidth="998.0" text="Week Settings">
-                        <font>
-                           <Font size="47.0" />
-                        </font>
-                        <padding>
-                           <Insets top="30.0" />
-                        </padding>
-                     </Label>
-                     <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="53.0" prefWidth="998.0" text="To keep fields as previous/default, leave them blank and hit &quot;Save Settings&quot;">
-                        <font>
-                           <Font size="20.0" />
-                        </font>
-                        <padding>
-                           <Insets bottom="20.0" />
-                        </padding>
-                     </Label>
-                     <GridPane prefHeight="516.0" prefWidth="998.0">
-                       <columnConstraints>
-                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.27703857421875" minWidth="10.0" prefWidth="370.32464599609375" />
-                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="664.4397277832031" minWidth="10.0" prefWidth="627.6753540039062" />
-                       </columnConstraints>
-                       <rowConstraints>
-                         <RowConstraints maxHeight="128.31849670410156" minHeight="10.0" prefHeight="128.31849670410156" vgrow="SOMETIMES" />
-                         <RowConstraints maxHeight="160.48733520507812" minHeight="10.0" prefHeight="114.54452514648438" vgrow="SOMETIMES" />
-                         <RowConstraints maxHeight="192.7198486328125" minHeight="10.0" prefHeight="117.66229248046875" vgrow="SOMETIMES" />
-                           <RowConstraints maxHeight="127.9969482421875" minHeight="10.0" prefHeight="120.33770751953125" vgrow="SOMETIMES" />
-                       </rowConstraints>
-                        <children>
-                           <Label alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="407.0" text="Week Name:">
-                              <font>
-                                 <Font size="23.0" />
-                              </font>
-                              <GridPane.margin>
-                                 <Insets right="20.0" />
-                              </GridPane.margin>
-                           </Label>
-                           <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="497.0" text="Theme:" GridPane.rowIndex="1">
-                              <font>
-                                 <Font size="23.0" />
-                              </font>
-                              <GridPane.margin>
-                                 <Insets right="20.0" />
-                              </GridPane.margin>
-                           </Label>
-                           <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="494.0" text="Daily Event Max:" GridPane.rowIndex="2">
-                              <font>
-                                 <Font size="23.0" />
-                              </font>
-                              <GridPane.margin>
-                                 <Insets right="20.0" />
-                              </GridPane.margin>
-                           </Label>
-                           <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="500.0" text="Daily Task Max:" GridPane.rowIndex="3">
-                              <font>
-                                 <Font size="23.0" />
-                              </font>
-                              <GridPane.margin>
-                                 <Insets right="20.0" />
-                              </GridPane.margin>
-                           </Label>
-                           <TextField fx:id="nameField" alignment="CENTER" prefHeight="56.0" prefWidth="469.0" GridPane.columnIndex="1">
-                              <GridPane.margin>
-                                 <Insets left="20.0" right="140.0" />
-                              </GridPane.margin>
-                           </TextField>
-                           <TextField fx:id="eventMaxField" prefHeight="55.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                              <GridPane.margin>
-                                 <Insets left="20.0" right="350.0" />
-                              </GridPane.margin>
-                           </TextField>
-                           <TextField fx:id="taskMaxField" prefHeight="55.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                              <GridPane.margin>
-                                 <Insets left="20.0" right="350.0" />
-                              </GridPane.margin>
-                           </TextField>
-                           <ComboBox fx:id="themeChoiceBox" prefHeight="52.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                              <GridPane.margin>
-                                 <Insets left="20.0" />
-                              </GridPane.margin>
-                           </ComboBox>
-                        </children>
-                     </GridPane>
-                     <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="61.0" prefWidth="193.0" text="Save Settings">
+                     <Label alignment="CENTER_RIGHT" prefHeight="77.0" prefWidth="407.0" text="Week Name:">
                         <font>
                            <Font size="23.0" />
                         </font>
-                        <VBox.margin>
-                           <Insets left="400.0" />
-                        </VBox.margin>
-                     </Button>
+                        <GridPane.margin>
+                           <Insets right="20.0" />
+                        </GridPane.margin>
+                     </Label>
+                     <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="497.0" text="Theme:" GridPane.rowIndex="1">
+                        <font>
+                           <Font size="23.0" />
+                        </font>
+                        <GridPane.margin>
+                           <Insets right="20.0" />
+                        </GridPane.margin>
+                     </Label>
+                     <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="494.0" text="Daily Event Max:" GridPane.rowIndex="2">
+                        <font>
+                           <Font size="23.0" />
+                        </font>
+                        <GridPane.margin>
+                           <Insets right="20.0" />
+                        </GridPane.margin>
+                     </Label>
+                     <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="500.0" text="Daily Task Max:" GridPane.rowIndex="3">
+                        <font>
+                           <Font size="23.0" />
+                        </font>
+                        <GridPane.margin>
+                           <Insets right="20.0" />
+                        </GridPane.margin>
+                     </Label>
+                     <TextField fx:id="nameField" alignment="CENTER" prefHeight="56.0" prefWidth="469.0" GridPane.columnIndex="1">
+                        <GridPane.margin>
+                           <Insets left="20.0" right="140.0" />
+                        </GridPane.margin>
+                     </TextField>
+                     <TextField fx:id="eventMaxField" prefHeight="55.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <GridPane.margin>
+                           <Insets left="20.0" right="350.0" />
+                        </GridPane.margin>
+                     </TextField>
+                     <TextField fx:id="taskMaxField" prefHeight="55.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <GridPane.margin>
+                           <Insets left="20.0" right="350.0" />
+                        </GridPane.margin>
+                     </TextField>
+                     <ComboBox fx:id="themeChoiceBox" prefHeight="52.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <GridPane.margin>
+                           <Insets left="20.0" />
+                        </GridPane.margin>
+                     </ComboBox>
                   </children>
-               </VBox>
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+               </GridPane>
+               <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="61.0" prefWidth="193.0" text="Save Settings">
+                  <font>
+                     <Font size="23.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets bottom="50.0" left="400.0" />
+                  </VBox.margin>
+               </Button>
             </children>
-         </AnchorPane>
+         </VBox>
       </children></AnchorPane>
 </Scene>

@@ -11,25 +11,28 @@
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="300.0" prefWidth="400.0">
+    <AnchorPane prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #CCFFF8;">
       <children>
-         <VBox layoutY="1.0" prefHeight="299.0" prefWidth="400.0">
+         <VBox layoutY="1.0" prefHeight="750.0" prefWidth="1000.0">
             <children>
                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="401.0" text="Welcome!">
                   <VBox.margin>
-                     <Insets top="70.0" />
+                     <Insets left="300.0" top="70.0" />
                   </VBox.margin>
                   <font>
                      <Font size="33.0" />
                   </font>
                </Label>
-               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="400.0" text="Please provide either the path to an existing .bujo, or the directory to create a file newWeek.bujo:">
+               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="1000.0" text="Please provide either the path to an existing .bujo, or the directory to create a file newWeek.bujo:">
                   <font>
-                     <Font size="9.0" />
+                     <Font name="Dubai Regular" size="18.0" />
                   </font>
                   <padding>
                      <Insets bottom="10.0" />
                   </padding>
+                  <VBox.margin>
+                     <Insets top="75.0" />
+                  </VBox.margin>
                </Label>
                <HBox alignment="CENTER" prefHeight="42.0" prefWidth="400.0">
                   <children>
@@ -37,6 +40,12 @@
                         <padding>
                            <Insets right="20.0" />
                         </padding>
+                        <HBox.margin>
+                           <Insets bottom="50.0" right="50.0" top="50.0" />
+                        </HBox.margin>
+                        <font>
+                           <Font name="Dubai Regular" size="17.0" />
+                        </font>
                      </Label>
                      <TextField fx:id="pathField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="230.0">
                         <HBox.margin>
@@ -44,14 +53,20 @@
                         </HBox.margin>
                      </TextField>
                   </children>
+                  <VBox.margin>
+                     <Insets top="50.0" />
+                  </VBox.margin>
                </HBox>
                <Button fx:id="journalButton" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Journal!">
                   <opaqueInsets>
                      <Insets />
                   </opaqueInsets>
                   <VBox.margin>
-                     <Insets bottom="20.0" left="170.0" top="10.0" />
+                     <Insets bottom="20.0" left="450.0" top="100.0" />
                   </VBox.margin>
+                  <font>
+                     <Font name="Dubai Regular" size="18.0" />
+                  </font>
                </Button>
             </children>
             <opaqueInsets>

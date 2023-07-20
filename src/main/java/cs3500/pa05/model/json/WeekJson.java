@@ -1,6 +1,8 @@
 package cs3500.pa05.model.json;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import cs3500.pa05.model.Theme;
+
 import java.util.List;
 
 /**
@@ -19,8 +21,8 @@ public record WeekJson(
     @JsonProperty("name") String name,
     @JsonProperty("task-max") int taskMax,
     @JsonProperty("event-max") int eventMax,
-    @JsonProperty("theme-options") List<ThemeJson> allThemes,
-    @JsonProperty("current-theme") ThemeJson chosenTheme,
+    @JsonProperty("theme-options") List<String> allThemes,
+    @JsonProperty("current-theme") String chosenTheme,
     @JsonProperty("days") List<DayJson> days,
     @JsonProperty("task-queue") List<TaskJson> taskQueue,
     @JsonProperty("note") String note

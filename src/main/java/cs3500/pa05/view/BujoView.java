@@ -24,6 +24,16 @@ public class BujoView {
   }
 
   /**
+   * Loads given .fxml scene
+   *
+   * @param fxml the scene to load
+   */
+  public BujoView(String fxml) {
+    this.loader = new FXMLLoader();
+    this.loader.setLocation(getClass().getClassLoader().getResource(fxml));
+  }
+
+  /**
    * Loads a scene from a new event GUI layout
    *
    * @return the layout
@@ -32,7 +42,7 @@ public class BujoView {
     try {
       return this.loader.load();
     } catch (IOException e) {
-      throw new IllegalStateException("can't load the scene");
+      throw new IllegalStateException("Can't load the scene.");
     }
   }
 

@@ -153,16 +153,16 @@ public class WeekController implements ControllerInterface {
    * font and colors.
    */
   private void handleTheme() {
-    if (weekJson.chosenTheme().name().equals("forest")) {
+    if (weekJson.chosenTheme().equals("FOREST")) {
       handleForestTheme();
-    } else if (weekJson.chosenTheme().name().equals("ocean")) {
+    } else if (weekJson.chosenTheme().equals("OCEAN")) {
       handleOceanTheme();
-    } else if (weekJson.chosenTheme().name().equals("neon")) {
+    } else if (weekJson.chosenTheme().equals("NEON")) {
       handleNeonTheme();
-    } else {
-      String color = weekJson.chosenTheme().name();
-      daysGrid.setStyle("-fx-background-color: #" + color.substring(2));
-      weekName.setTextFill(Paint.valueOf("-fx-background-color: #" + color.substring(2)));
+    } else if (!weekJson.chosenTheme().equals("NONE")) {
+      String color = weekJson.chosenTheme();
+      daysGrid.setStyle("-fx-background-color:" + color);
+      weekName.setTextFill(Paint.valueOf("-fx-background-color:#" + color));
     }
   }
 
@@ -485,8 +485,8 @@ public class WeekController implements ControllerInterface {
     int taskMax = weekJson.taskMax();
     int eventMax = weekJson.eventMax();
     String n = weekJson.name();
-    List<ThemeJson> themes = weekJson.allThemes();
-    ThemeJson currTheme = weekJson.chosenTheme();
+    List<String> themes = weekJson.allThemes();
+    String currTheme = weekJson.chosenTheme();
     List<DayJson> days = weekJson.days();
     List<TaskJson> taskQ = weekJson.taskQueue();
     String note = this.note.getText();
