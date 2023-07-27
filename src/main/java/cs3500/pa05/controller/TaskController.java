@@ -33,8 +33,6 @@ public class TaskController implements ControllerInterface {
   private WeekController weekController;
   private Stage stage;
   private Scene weekScene;
-  @FXML
-  private HBox taskQueue;
 
   /**
    * Instantiates a TaskController by creating new buttons and text fields.
@@ -53,7 +51,6 @@ public class TaskController implements ControllerInterface {
     this.weekController = c;
     this.stage = s;
     this.weekScene = w;
-    this.taskQueue = new HBox();
   }
 
   /**
@@ -144,8 +141,9 @@ public class TaskController implements ControllerInterface {
    */
   private void closeScene() {
     if (setTask()) {
-      weekController.saveNewTask();
       stage.setScene(weekScene);
+      stage.show();
+      weekController.saveNewTask();
     }
   }
 }

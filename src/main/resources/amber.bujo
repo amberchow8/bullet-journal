@@ -1,0 +1,56 @@
+{
+  "name" : "Amber",
+  "task-max" : 3,
+  "event-max" : 3,
+  "theme-options" : [ "NONE", "NEON", "FOREST", "OCEAN", "f69999", "ffb3b3", "ccb3ff" ],
+  "current-theme" : "ccb3ff",
+  "days" : [ {
+    "day" : "SUNDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "MONDAY",
+    "events" : [ {
+      "name" : "Event 3",
+      "description" : "",
+      "day" : "Monday",
+      "start-time" : "11:00",
+      "duration" : "5"
+    } ],
+    "tasks" : [ ]
+  }, {
+    "day" : "TUESDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "WEDNESDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "THURSDAY",
+    "events" : [ {
+      "name" : "Event 2",
+      "description" : "",
+      "day" : "Thursday",
+      "start-time" : "12:00",
+      "duration" : "1"
+    } ],
+    "tasks" : [ ]
+  }, {
+    "day" : "FRIDAY",
+    "events" : [ ],
+    "tasks" : [ ]
+  }, {
+    "day" : "SATURDAY",
+    "events" : [ {
+      "name" : "Event 1",
+      "description" : "",
+      "day" : "Saturday",
+      "start-time" : "10:00",
+      "duration" : "2"
+    } ],
+    "tasks" : [ ]
+  } ],
+  "task-queue" : [ ],
+  "note" : "This is your first note :)"
+}

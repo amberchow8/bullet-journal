@@ -36,8 +36,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
@@ -77,6 +76,8 @@ public class WeekController implements ControllerInterface {
   @FXML
   private Label note;
   @FXML
+  private HBox headerBox;
+  @FXML
   private GridPane taskList;
   private List<DayJson> days;
   private EventController eventController;
@@ -113,6 +114,7 @@ public class WeekController implements ControllerInterface {
     newTask = new Button();
     save = new Button();
     notes = new TextInputDialog();
+    headerBox = new HBox();
     daysGrid = new GridPane();
     days = new ArrayList<>();
     taskQueue = new HBox();
@@ -145,7 +147,6 @@ public class WeekController implements ControllerInterface {
     note.setText(weekJson.note());
     displayEvents();
     displayTasks();
-
   }
 
   /**
@@ -161,8 +162,10 @@ public class WeekController implements ControllerInterface {
       handleNeonTheme();
     } else if (!weekJson.chosenTheme().equals("NONE")) {
       String color = weekJson.chosenTheme();
-      daysGrid.setStyle("-fx-background-color:" + color);
-      weekName.setTextFill(Paint.valueOf("-fx-background-color:#" + color));
+      headerBox.setBackground(new Background(
+              new BackgroundFill(Paint.valueOf(color),CornerRadii.EMPTY, Insets.EMPTY)));
+      taskQueue.setBackground(new Background(
+              new BackgroundFill(Paint.valueOf(color),CornerRadii.EMPTY, Insets.EMPTY)));
     }
   }
 
@@ -276,9 +279,12 @@ public class WeekController implements ControllerInterface {
     Label newEventLabel = new Label();
     newEventLabel.setWrapText(true);
     newEventLabel.setText(event.eventToString());
+    newEventLabel.setBackground(new Background(new BackgroundFill(Color.PINK,
+            CornerRadii.EMPTY, Insets.EMPTY)));
     isHyperLink(event);
     GridPane.setValignment(newEventLabel, VPos.TOP);
-    newEventLabel.setPadding(new Insets(10, 20, 10, 20));
+    newEventLabel.setPadding(new Insets(10, 10, 10, 10));
+    newEventLabel.setMaxWidth(140);
     int index = findDayIndex(event.dayOfWeekProperty());
     int row = openEventTaskSpots.get(index);
     this.daysGrid.add(newEventLabel, index, row);
@@ -414,8 +420,10 @@ public class WeekController implements ControllerInterface {
           warning.setContentText("Day has reached maximum event limit.");
           d.events().remove(eventJson);
           warning.showAndWait();
-        } else {
+        }
+        else {
           displayEvent(event);
+          handleTheme();
         }
       }
     }
@@ -472,6 +480,7 @@ public class WeekController implements ControllerInterface {
           warning.showAndWait();
         } else {
           displayTask(task);
+          handleTheme();
         }
       }
     }

@@ -134,7 +134,7 @@ public class WelcomeController implements ControllerInterface {
             String note = "This is your first note :)";
             List<TaskJson> taskQueue = new ArrayList<>();
             this.bujoWeek = new WeekJson("New Week", 5, 5, allThemes,
-                    "none", days, taskQueue, note);
+                    "NONE", days, taskQueue, note);
         } else {
             FileReader reader = new FileReader(Paths.get(bujoPath));
             this.bujoWeek = reader.readBujo();

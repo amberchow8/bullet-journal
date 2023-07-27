@@ -133,8 +133,9 @@ public class EventController implements ControllerInterface {
    */
   private void closeScene() {
     if (setEvent()) {
-      weekController.saveNewEvent();
       stage.setScene(weekScene);
+      stage.show();
+      weekController.saveNewEvent();
     }
   }
 

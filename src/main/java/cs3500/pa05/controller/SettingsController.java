@@ -71,7 +71,9 @@ public class SettingsController implements ControllerInterface {
         ColorPicker colorPicker = new ColorPicker();
         colorPicker.setOnAction(event -> {
             Color selectedColor = colorPicker.getValue();
-            selectedTheme = String.valueOf(selectedColor);
+            System.out.println(selectedColor);
+            selectedTheme = String.valueOf(selectedColor).substring(2,8);
+            System.out.println(selectedTheme);
             bujoWeek.allThemes().add(selectedTheme);
         });
         customTheme.getDialogPane().setContent(colorPicker);

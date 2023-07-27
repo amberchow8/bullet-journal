@@ -32,6 +32,57 @@
                            <children>
                               <StackPane prefHeight="600.0" prefWidth="1000.0">
                                  <children>
+                                    <GridPane alignment="CENTER" gridLinesVisible="true" prefHeight="600.0" prefWidth="1000.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="500.0" prefWidth="1000.0">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="2">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="3">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="4">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="5">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="6">
+                                             <GridPane.margin>
+                                                <Insets top="-25.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
                                     <GridPane fx:id="daysGrid" alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -49,60 +100,9 @@
                                           <RowConstraints vgrow="SOMETIMES" />
                                        </rowConstraints>
                                     </GridPane>
-                                    <GridPane alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
-                                       <columnConstraints>
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                       </columnConstraints>
-                                       <rowConstraints>
-                                          <RowConstraints vgrow="SOMETIMES" />
-                                       </rowConstraints>
-                                       <children>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="1">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-style: dashed;" GridPane.columnIndex="2">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="4">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="5">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000; -fx-border-style: dashed;" GridPane.columnIndex="6">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" style="-fx-border-color: #000000;" GridPane.columnIndex="3">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                       </children>
-                                    </GridPane>
                                  </children>
                                  <HBox.margin>
-                                    <Insets left="35.0" right="35.0" />
+                                    <Insets bottom="15.0" left="35.0" right="35.0" />
                                  </HBox.margin>
                               </StackPane>
                            </children>
@@ -111,7 +111,7 @@
                      <bottom>
                         <HBox fx:id="taskQueue" maxWidth="650.0" minWidth="650.0" prefHeight="100.0" prefWidth="624.0" style="-fx-border-color: #000000; -fx-background-color: #FDFEC6;" BorderPane.alignment="CENTER">
                            <children>
-                              <Label fx:id="taskQName" alignment="CENTER" contentDisplay="CENTER" minWidth="75.0" prefHeight="30.0" prefWidth="50.0" text="Tasks" textAlignment="CENTER">
+                              <Label fx:id="taskQueueName" alignment="CENTER" contentDisplay="CENTER" minWidth="75.0" prefHeight="30.0" prefWidth="50.0" text="Tasks" textAlignment="CENTER">
                                  <font>
                                     <Font name="Dubai Regular" size="18.0" />
                                  </font>
@@ -138,7 +138,7 @@
                                     <Insets left="-60.0" top="30.0" />
                                  </HBox.margin>
                               </GridPane>
-                              <HBox minWidth="400.0" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FFEFB5; -fx-border-color: #000000; -fx-border-style: dotted;">
+                              <HBox minWidth="400.0" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FFEFB5; -fx-border-color: #000000;">
                                  <HBox.margin>
                                     <Insets left="1.0" />
                                  </HBox.margin>
@@ -169,7 +169,7 @@
                      <top>
                         <VBox prefHeight="150.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                            <children>
-                              <HBox prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #EED6FF;">
+                              <HBox fx:id="headerBox" prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #EED6FF;">
                                  <children>
                                     <Label fx:id="weekName" alignment="CENTER" prefHeight="62.0" prefWidth="214.0" text="This Week" textAlignment="CENTER">
                                        <font>
@@ -251,7 +251,7 @@
                                     </Button>
                                  </children>
                               </HBox>
-                              <GridPane prefHeight="48.0" prefWidth="1054.0" style="-fx-border-style: dashed;">
+                              <GridPane prefHeight="48.0" prefWidth="1054.0">
                                 <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
