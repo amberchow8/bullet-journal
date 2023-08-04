@@ -2,8 +2,8 @@
   "name" : "Amber",
   "task-max" : 3,
   "event-max" : 3,
-  "theme-options" : [ "NONE", "NEON", "FOREST", "OCEAN", "f69999", "ffb3b3", "ccb3ff" ],
-  "current-theme" : "ccb3ff",
+  "theme-options" : [ "NONE", "NEON", "FOREST", "OCEAN" ],
+  "current-theme" : "OCEAN",
   "days" : [ {
     "day" : "SUNDAY",
     "events" : [ ],
@@ -18,7 +18,13 @@
     "tasks" : [ ]
   }, {
     "day" : "WEDNESDAY",
-    "events" : [ ],
+    "events" : [ {
+      "name" : "Event 1",
+      "description" : "",
+      "day" : "Wednesday",
+      "start-time" : "10:00",
+      "duration" : "1"
+    } ],
     "tasks" : [ ]
   }, {
     "day" : "THURSDAY",
@@ -27,7 +33,12 @@
   }, {
     "day" : "FRIDAY",
     "events" : [ ],
-    "tasks" : [ ]
+    "tasks" : [ {
+      "name" : "Task 1",
+      "description" : "Wash dishes",
+      "day" : "Friday",
+      "completed" : "true"
+    } ]
   }, {
     "day" : "SATURDAY",
     "events" : [ ],
@@ -35,19 +46,9 @@
   } ],
   "task-queue" : [ {
     "name" : "Task 1",
-    "description" : "",
-    "day" : "Tuesday",
-    "completed" : "false"
-  }, {
-    "name" : "Task 2",
-    "description" : "",
-    "day" : "Wednesday",
-    "completed" : "false"
-  }, {
-    "name" : "Task 2",
-    "description" : "",
-    "day" : "Wednesday",
-    "completed" : "false"
+    "description" : "Wash dishes",
+    "day" : "Friday",
+    "completed" : "true"
   } ],
-  "note" : "This is your first note :)"
+  "note" : "hello world :)"
 }

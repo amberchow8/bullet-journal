@@ -70,11 +70,11 @@ class TaskTest {
     Task task = new Task("n", "", DayType.MONDAY, false);
     assertTrue(task.taskToString().contains("Task: n"));
     assertTrue(task.taskToString().contains("Day: Monday"));
-    assertTrue(task.taskToString().contains("Complete: false"));
+    assertTrue(task.taskToString().contains("Status: incomplete"));
     assertTrue(testTask.taskToString().contains("Task: test"));
     assertTrue(testTask.taskToString().contains("Day: Saturday"));
     assertTrue(testTask.taskToString().contains("Description: a test task"));
-    assertTrue(testTask.taskToString().contains("Complete: false"));
+    assertTrue(testTask.taskToString().contains("Status: incomplete"));
   }
 
   /**
