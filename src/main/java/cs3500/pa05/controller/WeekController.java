@@ -8,13 +8,9 @@ import cs3500.pa05.model.Task;
 import cs3500.pa05.model.json.DayJson;
 import cs3500.pa05.model.json.EventJson;
 import cs3500.pa05.model.json.TaskJson;
-import cs3500.pa05.model.json.ThemeJson;
 import cs3500.pa05.model.json.WeekJson;
 import cs3500.pa05.view.BujoView;
-import java.awt.Desktop;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,14 +22,8 @@ import javafx.geometry.Side;
 import javafx.geometry.VPos;
 import javafx.scene.Group;
 import javafx.scene.chart.PieChart;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -49,14 +39,8 @@ import javafx.stage.Stage;
 public class WeekController implements ControllerInterface {
   private WeekJson weekJson;
   private String name;
-  private int intOne = 0;
-  private int intTwo = 0;
   @FXML
-  private MenuButton urlpicker;
-  @FXML
-  private Button delete;
-  @FXML
-  private Button delete1;
+  private Button taskComplete;
   @FXML
   private Label weekName;
   @FXML
@@ -129,9 +113,7 @@ public class WeekController implements ControllerInterface {
     stats = new PieChart();
     weekOverview = new Button();
     icon = new ImageView();
-    delete = initButton();
-    delete1 = initButton();
-    urlpicker = new MenuButton();
+    taskComplete = new Button();
   }
 
   /**
@@ -178,6 +160,39 @@ public class WeekController implements ControllerInterface {
     save.setOnAction(e -> handleSave());
     addQuote.setOnAction(e -> handleNoteQuote());
     weekOverview.setOnAction(e -> updateOverview());
+    taskComplete.setOnAction(e -> handleTaskComplete());
+  }
+
+//  /**
+//   * Shows pop-up to delete an event
+//   */
+//  private void handleDeleteEvent() {
+//    Dialog<ButtonType> dialog = new Dialog<>();
+//    TableView<Object> tableView = new TableView<>();
+//    TableColumn<Object, String> eventNameColumn = new TableColumn<>("Event Name");
+//    eventNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+//    ObservableList<Object> allEvents = FXCollections.observableArrayList();
+//    for (DayJson day : this.days) {
+//      for (EventJson eventJson : day.events()) {
+//        Event event = JsonUtils.convertEventJson(eventJson);
+//        allEvents.add(event);
+//      }
+//    }
+//    //tableView.getItems().addAll(allEvents);
+//    tableView.setItems(allEvents);
+//    tableView.getColumns().add(eventNameColumn);
+//    ButtonType close = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+//    dialog.setTitle("Delete Event");
+//    dialog.getDialogPane().setContent(tableView);
+//    dialog.getDialogPane().getButtonTypes().add(close);
+//    dialog.showAndWait();
+//  }
+
+  /**
+   * Shows pop-up to complete a task
+   */
+  private void handleTaskComplete() {
+
   }
 
   /**
@@ -240,22 +255,6 @@ public class WeekController implements ControllerInterface {
 
   }
 
-  /**
-   * Initializes a button.
-   *
-   * @return the button initialized
-   */
-  @FXML
-  public Button initButton() {
-    intOne++;
-    intTwo++;
-    Button button = new Button("del");
-    button.setOnAction(event -> System.out.println("working!!"));
-    button.setId(String.valueOf(intOne));
-    button.toFront();
-    button.arm();
-    return button;
-  }
 
   /**
    * Displays existing event data from previous saved file
@@ -281,35 +280,35 @@ public class WeekController implements ControllerInterface {
     newEventLabel.setText(event.eventToString());
     newEventLabel.setBackground(new Background(new BackgroundFill(Color.PINK,
             CornerRadii.EMPTY, Insets.EMPTY)));
-    isHyperLink(event);
     GridPane.setValignment(newEventLabel, VPos.TOP);
     newEventLabel.setPadding(new Insets(10, 10, 10, 10));
     newEventLabel.setMaxWidth(140);
-    int index = findDayIndex(event.dayOfWeekProperty());
+    int index = findDayIndex(event.getDayOfWeek());
     int row = openEventTaskSpots.get(index);
     this.daysGrid.add(newEventLabel, index, row);
     openEventTaskSpots.set(index, row + 1);
-    delete1.setText("delete: " + event.nameProperty() + newEventLabel.getId());
-    delete.setOnAction(e -> {
-      newEventLabel.setText("");
-      daysGrid.getChildren().remove(newEventLabel);
-      for (MenuItem item : urlpicker.getItems()) {
-        if (item.getText().equals(event.nameProperty())) {
-          urlpicker.getItems().remove(item);
-        }
-        for(DayJson d: days){
-          for(EventJson eventt: d.events()){
-            if(eventt.name().equals(event.nameProperty())){
-              d.events().remove(eventt);
-            }
-          }
-        }
-      }
-    });
+
+    // add delete button to the label
+    Button delete = new Button("X");
+    delete.setStyle("-fx-font-size: 6pt;");
+    newEventLabel.setGraphic(delete);
+    newEventLabel.setContentDisplay(ContentDisplay.RIGHT);
+    delete.setOnAction(e -> removeEvent(newEventLabel, event));
   }
 
-  public void handleRemove(){
+    /**
+     * Removes the given event from its DayJson events list
+     *
+     * @param eventLabel label
+     * @param event event
+     */
+  private void removeEvent(Label eventLabel, Event event) {
+      EventJson convertedEvent = JsonUtils.convertEvent(event);
+    this.daysGrid.getChildren().remove(eventLabel);
 
+    for (DayJson dayJson : this.days) {
+        dayJson.events().remove(convertedEvent);
+    }
   }
 
   /**
@@ -341,7 +340,8 @@ public class WeekController implements ControllerInterface {
     int row = openEventTaskSpots.get(index);
     this.daysGrid.add(newTaskLabel, index, row);
     openEventTaskSpots.set(index, row + 1);
-    isHyperLinkTask(task);
+
+    // add task queue label
     Label taskQueueLabel = new Label();
     taskQueueLabel.setWrapText(true);
     String status;
@@ -351,33 +351,36 @@ public class WeekController implements ControllerInterface {
       status = "incomplete";
     }
     taskQueueLabel.setText(task.nameProperty() + ": " + status);
-
-    delete.setText("delete: " + task.nameProperty() + newTaskLabel.getId());
-
     taskList.add(taskQueueLabel, openTaskQueueSpot, 0);
     openTaskQueueSpot++;
 
-    delete.setOnAction(e -> {
-      newTaskLabel.setText("");
-      daysGrid.getChildren().remove(newTaskLabel);
-      for (MenuItem item : urlpicker.getItems()) {
-        if (item.getText().equals(task.nameProperty())) {
-          urlpicker.getItems().remove(item);
-        }
-        taskList.getChildren().remove(taskQueueLabel);
-        taskQueueLabel.setText("");
-
-        for(DayJson day: days){
-          for(TaskJson taskk: day.tasks()){
-            if(taskk.name().equals(task.nameProperty())){
-              day.tasks().remove(taskk);
-            }
-          }
-        }
-      }});
+      // add delete button to the label
+      Button delete = new Button("X");
+      delete.setStyle("-fx-font-size: 6pt;");
+      newTaskLabel.setGraphic(delete);
+      newTaskLabel.setContentDisplay(ContentDisplay.RIGHT);
+      delete.setOnAction(e -> removeTask(newTaskLabel, taskQueueLabel, task));
   }
 
-  /**
+    /**
+     *  Removes the given task from its DayJson tasks list
+     *  and the task queue list
+     *
+     * @param taskLabel label
+     * @param task task
+     */
+    private void removeTask(Label taskLabel, Label taskQueueLabel, Task task) {
+        TaskJson convertedTask = JsonUtils.convertTask(task);
+        this.daysGrid.getChildren().remove(taskLabel);
+        this.taskList.getChildren().remove(taskQueueLabel);
+        for (DayJson dayJson : this.days) {
+            dayJson.tasks().remove(convertedTask);
+        }
+        this.tasks.remove(convertedTask);
+    }
+
+
+    /**
    * Sets the days list of this to the given list
    *
    * @param d the list of days
@@ -414,7 +417,7 @@ public class WeekController implements ControllerInterface {
     Event event = eventController.getEvent();
     EventJson eventJson = JsonUtils.convertEvent(event);
     for (DayJson d : days) {
-      if (event.dayOfWeekProperty().equals(d.day())) {
+      if (event.getDayOfWeek().equals(d.day())) {
         d.events().add(eventJson);
         if (d.events().size() == weekJson.eventMax() + 1) {
           warning.setContentText("Day has reached maximum event limit.");
@@ -550,54 +553,6 @@ public class WeekController implements ControllerInterface {
     newTask.setStyle("-fx-background-color: #2FB852");
     save.setFont(Font.font("Verdana", 12));
     save.setStyle("-fx-background-color: #AFE852");
-  }
-
-  /**
-   * Determines if the event contains a hyperlink.
-   *
-   * @param eventt the event to check
-   */
-  private void isHyperLink(Event eventt) {
-    if (eventt.isUrl(eventt.descriptionProperty())) {
-      MenuItem item = new MenuItem(eventt.nameProperty());
-      item.setText(eventt.nameProperty());
-      System.out.println(item.getText());
-      item.setId(eventt.nameProperty() + intTwo);
-      item.setOnAction(e -> {
-        URI url;
-        try {
-          url = new URI(eventt.descriptionProperty());
-          Desktop.getDesktop().browse(new java.net.URI(url.toString()));
-        } catch (URISyntaxException | IOException ex) {
-          throw new RuntimeException(ex);
-        }
-      });
-      urlpicker.getItems().add(item);
-    }
-  }
-
-  /**
-   * Determines if the description is a link.
-   *
-   * @param taskk the task to look at
-   */
-  private void isHyperLinkTask(Task taskk) {
-    if (taskk.isUrlTask(taskk.descriptionProperty())) {
-      MenuItem item = new MenuItem(taskk.nameProperty());
-      item.setText(taskk.nameProperty());
-      System.out.println(item.getText());
-      item.setId(taskk.nameProperty() + intOne);
-      item.setOnAction(e -> {
-        URI url;
-        try {
-          url = new URI(taskk.descriptionProperty());
-          Desktop.getDesktop().browse(new java.net.URI(url.toString()));
-        } catch (URISyntaxException | IOException ex) {
-          throw new RuntimeException(ex);
-        }
-      });
-      urlpicker.getItems().add(item);
-    }
   }
 
   /**

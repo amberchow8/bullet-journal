@@ -26,7 +26,7 @@ class EventTest {
    */
   @Test
   public void nameProperty() {
-    assertEquals("tester", testEvent.nameProperty());
+    assertEquals("tester", testEvent.getName());
   }
 
   /**
@@ -34,7 +34,7 @@ class EventTest {
    */
   @Test
   public void descriptionProperty() {
-    assertEquals("a tester event", testEvent.descriptionProperty());
+    assertEquals("a tester event", testEvent.getDescription());
   }
 
   /**
@@ -42,7 +42,7 @@ class EventTest {
    */
   @Test
   public void dayOfWeekProperty() {
-    assertEquals(DayType.SUNDAY, testEvent.dayOfWeekProperty());
+    assertEquals(DayType.SUNDAY, testEvent.getDayOfWeek());
   }
 
   /**
@@ -50,7 +50,7 @@ class EventTest {
    */
   @Test
   public void startTimeProperty() {
-    assertEquals("11:00", testEvent.startTimeProperty());
+    assertEquals("11:00", testEvent.getStartTime());
   }
 
   /**
@@ -67,7 +67,7 @@ class EventTest {
    */
   @Test
   public void durationProperty() {
-    assertEquals("1.5", testEvent.durationProperty());
+    assertEquals("1.5", testEvent.getDuration());
   }
 
   /**

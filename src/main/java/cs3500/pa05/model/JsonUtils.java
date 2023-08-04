@@ -51,9 +51,9 @@ public class JsonUtils {
    */
   public static EventJson convertEvent(Event event) {
     EventJson eventJson = new EventJson(
-        event.nameProperty(), event.descriptionProperty(),
-        event.dayOfWeekProperty().getDay(), event.startTimeProperty(),
-        event.durationProperty());
+        event.getName(), event.getDescription(),
+        event.getDayOfWeek().getDay(), event.getStartTime(),
+        event.getDuration());
     return eventJson;
   }
 

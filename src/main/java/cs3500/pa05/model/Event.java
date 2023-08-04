@@ -38,7 +38,7 @@ public class Event {
    *
    * @return name
    */
-  public String nameProperty() {
+  public String getName() {
     return name;
   }
 
@@ -47,7 +47,7 @@ public class Event {
    *
    * @return description
    */
-  public String descriptionProperty() {
+  public String getDescription() {
     return description;
   }
 
@@ -56,7 +56,7 @@ public class Event {
    *
    * @return day
    */
-  public DayType dayOfWeekProperty() {
+  public DayType getDayOfWeek() {
     return dayOfWeek;
   }
 
@@ -65,7 +65,7 @@ public class Event {
    *
    * @return start time
    */
-  public String startTimeProperty() {
+  public String getStartTime() {
     return startTime;
   }
 
@@ -86,7 +86,7 @@ public class Event {
    *
    * @return duration
    */
-  public String durationProperty() {
+  public String getDuration() {
     return duration;
   }
 

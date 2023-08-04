@@ -10,13 +10,7 @@
     "tasks" : [ ]
   }, {
     "day" : "MONDAY",
-    "events" : [ {
-      "name" : "Event 3",
-      "description" : "",
-      "day" : "Monday",
-      "start-time" : "11:00",
-      "duration" : "5"
-    } ],
+    "events" : [ ],
     "tasks" : [ ]
   }, {
     "day" : "TUESDAY",
@@ -28,13 +22,7 @@
     "tasks" : [ ]
   }, {
     "day" : "THURSDAY",
-    "events" : [ {
-      "name" : "Event 2",
-      "description" : "",
-      "day" : "Thursday",
-      "start-time" : "12:00",
-      "duration" : "1"
-    } ],
+    "events" : [ ],
     "tasks" : [ ]
   }, {
     "day" : "FRIDAY",
@@ -42,15 +30,24 @@
     "tasks" : [ ]
   }, {
     "day" : "SATURDAY",
-    "events" : [ {
-      "name" : "Event 1",
-      "description" : "",
-      "day" : "Saturday",
-      "start-time" : "10:00",
-      "duration" : "2"
-    } ],
+    "events" : [ ],
     "tasks" : [ ]
   } ],
-  "task-queue" : [ ],
+  "task-queue" : [ {
+    "name" : "Task 1",
+    "description" : "",
+    "day" : "Tuesday",
+    "completed" : "false"
+  }, {
+    "name" : "Task 2",
+    "description" : "",
+    "day" : "Wednesday",
+    "completed" : "false"
+  }, {
+    "name" : "Task 2",
+    "description" : "",
+    "day" : "Wednesday",
+    "completed" : "false"
+  } ],
   "note" : "This is your first note :)"
 }
