@@ -30,7 +30,7 @@
                            <children>
                               <StackPane prefHeight="600.0" prefWidth="1000.0">
                                  <children>
-                                    <GridPane alignment="CENTER" gridLinesVisible="true" prefHeight="600.0" prefWidth="1000.0">
+                                    <GridPane fx:id="gridBackground" alignment="CENTER" gridLinesVisible="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -43,45 +43,8 @@
                                        <rowConstraints>
                                           <RowConstraints vgrow="SOMETIMES" />
                                        </rowConstraints>
-                                       <children>
-                                          <Label prefHeight="500.0" prefWidth="1000.0">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="1">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="2">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="3">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="4">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="5">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                          <Label prefHeight="500.0" prefWidth="1000.0" GridPane.columnIndex="6">
-                                             <GridPane.margin>
-                                                <Insets top="-25.0" />
-                                             </GridPane.margin>
-                                          </Label>
-                                       </children>
                                     </GridPane>
-                                    <GridPane fx:id="daysGrid" alignment="CENTER" prefHeight="600.0" prefWidth="1000.0">
+                                    <GridPane fx:id="daysGrid" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0">
                                        <columnConstraints>
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -107,7 +70,7 @@
                         </HBox>
                      </center>
                      <bottom>
-                        <HBox fx:id="taskQueue" maxWidth="650.0" minWidth="650.0" prefHeight="100.0" prefWidth="624.0" style="-fx-border-color: #000000; -fx-background-color: #FDFEC6;" BorderPane.alignment="CENTER">
+                        <HBox fx:id="taskQueue" maxHeight="-Infinity" maxWidth="650.0" minHeight="-Infinity" minWidth="650.0" prefHeight="100.0" prefWidth="624.0" style="-fx-border-color: #000000; -fx-border-width: 1; -fx-background-color: #FDFEC6;" BorderPane.alignment="CENTER">
                            <children>
                               <Label fx:id="taskQueueName" alignment="CENTER" contentDisplay="CENTER" minWidth="75.0" prefHeight="30.0" prefWidth="50.0" text="Tasks" textAlignment="CENTER">
                                  <font>
@@ -136,9 +99,9 @@
                                     <Insets left="-60.0" top="30.0" />
                                  </HBox.margin>
                               </GridPane>
-                              <HBox minWidth="400.0" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FFEFB5; -fx-border-color: #000000;">
+                              <HBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="418.0" prefHeight="100.0" prefWidth="450.0" style="-fx-background-color: #FFEFB5; -fx-border-color: #000000; -fx-border-width: 1;">
                                  <HBox.margin>
-                                    <Insets left="1.0" />
+                                    <Insets />
                                  </HBox.margin>
                                  <children>
                                     <Label alignment="CENTER" prefHeight="30.0" prefWidth="74.0" text="Notes" textAlignment="CENTER">
@@ -160,7 +123,7 @@
                               </HBox>
                            </children>
                            <BorderPane.margin>
-                              <Insets right="400.0" />
+                              <Insets right="415.0" />
                            </BorderPane.margin>
                         </HBox>
                      </bottom>

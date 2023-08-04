@@ -16,5 +16,4 @@ public record TaskJson(
     @JsonProperty("day") String day,
     @JsonProperty("completed") String completed
 ) {
-
 }

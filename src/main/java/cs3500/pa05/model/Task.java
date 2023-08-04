@@ -78,15 +78,21 @@ public class Task {
    * @return string format of this task
    */
   public String taskToString() {
+    String status;
+    if (complete) {
+      status = "complete";
+    } else {
+      status = "incomplete";
+    }
     if (description.isEmpty()) {
       return "Task: " + name
           + "\nDay: " + dayOfWeek.getDay()
-          + "\nComplete: " + complete;
+          + "\nStatus: " + status;
     } else {
       return "Task: " + name
           + "\nDay: " + dayOfWeek.getDay()
           + "\nDescription: " + description
-          + "\nComplete: " + complete;
+          + "\nStatus: " + status;
     }
   }
 
