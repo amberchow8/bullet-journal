@@ -76,24 +76,4 @@ class TaskTest {
     assertTrue(testTask.taskToString().contains("Description: a test task"));
     assertTrue(testTask.taskToString().contains("Status: incomplete"));
   }
-
-  /**
-   * Tests the method isUrl
-   */
-  @Test
-  public void testIsUrl() {
-    Task task = new Task("n", "", DayType.MONDAY, false);
-
-    // a valid URL
-    String validUrl = "https://example.com";
-    assertTrue(task.isUrlTask(validUrl));
-
-    // an invalid URL
-    String invalidUrl = "example.com";
-    assertFalse(task.isUrlTask(invalidUrl));
-
-    // an empty string
-    String emptyString = "";
-    assertFalse(task.isUrlTask(emptyString));
-  }
 }

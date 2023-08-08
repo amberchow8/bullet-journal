@@ -560,7 +560,6 @@ public class WeekController implements ControllerInterface {
                 "https://upload.wikimedia.org/wikipedia/commons/"
                         + "thumb/7/7e/Emoji_u1f30a.svg/1024px-Emoji_u1f30a.svg.png"));
         icon.setPreserveRatio(true);
-        stage.getScene().setFill(Color.LIGHTBLUE);
         Font font = Font.font("Lucida Calligraphy", 30);
         weekName.setFont(font);
         weekName.setTextFill(Color.WHITE);
@@ -583,6 +582,32 @@ public class WeekController implements ControllerInterface {
     /**
      * A theme for the GUI
      */
+    private void handleNeonTheme() {
+        icon.setImage(new Image("https://cdn.shopify.com/s/files/1/1061/1924/"
+                + "products/Smiling_Face_Emoji_large.png?v=1571606036"));
+        icon.setPreserveRatio(true);
+        Font font = Font.font("impact", 30);
+        weekName.setFont(font);
+        weekName.setTextFill(Color.WHITE);
+        gridBackground.setStyle("-fx-background-color: #f653ad");
+        taskQueue.setStyle("-fx-background-color: #b479ff;" + "-fx-border-color: #000000");
+        newEvent.setFont(Font.font("impact", 12));
+        newEvent.setStyle("-fx-background-color: #069dfa");
+        newEvent.setTextFill(Color.WHITE);
+        newTask.setFont(Font.font("impact", 12));
+        newTask.setStyle("-fx-background-color: #ffa352");
+        newTask.setTextFill(Color.WHITE);
+        save.setFont(Font.font("impact", 12));
+        save.setStyle("-fx-background-color: #23f804");
+        save.setTextFill(Color.WHITE);
+        weekOverview.setFont(Font.font("impact", 12));
+        weekOverview.setStyle("-fx-background-color: #03b0f1");
+        weekOverview.setTextFill(Color.WHITE);
+    }
+
+    /**
+     * A theme for the GUI
+     */
     private void handleForestTheme() {
         icon.setImage(new Image("https://www.clipartmax.com/png/middle/118-1181813_"
                 + "emoji-forest-forest-emoji.png"));
@@ -591,35 +616,19 @@ public class WeekController implements ControllerInterface {
         Font font = Font.font("Verdana", 30);
         weekName.setFont(font);
         weekName.setTextFill(Color.WHITE);
-        daysGrid.setStyle("-fx-background-color: #ab6f29");
-        taskQueue.setStyle("-fx-background-color: #DEC260");
-        taskQueueName.setTextFill(Color.WHITE);
+        gridBackground.setStyle("-fx-background-color: #ab6f29");
+        taskQueue.setStyle("-fx-background-color: #DEC260;" + "-fx-border-color: #000000");
         newEvent.setFont(Font.font("Verdana", 12));
         newEvent.setStyle("-fx-background-color: #289550");
+        newEvent.setTextFill(Color.WHITE);
         newTask.setFont(Font.font("Verdana", 12));
         newTask.setStyle("-fx-background-color: #2FB852");
+        newTask.setTextFill(Color.WHITE);
         save.setFont(Font.font("Verdana", 12));
         save.setStyle("-fx-background-color: #AFE852");
-    }
-
-    /**
-     * A theme for the GUI
-     */
-    private void handleNeonTheme() {
-        icon.setImage(new Image("https://cdn.shopify.com/s/files/1/1061/1924/"
-                + "products/Smiling_Face_Emoji_large.png?v=1571606036"));
-        icon.setPreserveRatio(true);
-        stage.getScene().setFill(Color.HOTPINK);
-        Font font = Font.font("impact", 30);
-        weekName.setFont(font);
-        daysGrid.setStyle("-fx-background-color: #f653ad");
-        taskQueue.setStyle("-fx-background-color: #ae2ade");
-        taskQueueName.setTextFill(Color.WHITE);
-        newEvent.setFont(Font.font("impact", 12));
-        newEvent.setStyle("-fx-background-color: #069dfa");
-        newTask.setFont(Font.font("impact", 12));
-        newTask.setStyle("-fx-background-color: #fd6705");
-        save.setFont(Font.font("impact", 12));
-        save.setStyle("-fx-background-color: #23f804");
+        save.setTextFill(Color.WHITE);
+        weekOverview.setFont(Font.font("Verdana", 12));
+        weekOverview.setStyle("-fx-background-color: #03b0f1");
+        weekOverview.setTextFill(Color.WHITE);
     }
 }

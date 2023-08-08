@@ -8,13 +8,13 @@
 <?import javafx.scene.text.Font?>
 
 <Scene xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="200" prefWidth="200" style="-fx-background-color: FDFEC1;">
+    <AnchorPane prefHeight="200" prefWidth="200" style="-fx-background-color: FFFAD2;">
       <children>
          <VBox layoutX="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0">
             <children>
                <Label text="Bullet Journal" textAlignment="CENTER">
                   <VBox.margin>
-                     <Insets left="350.0" top="50.0" />
+                     <Insets left="350.0" top="150.0" />
                   </VBox.margin>
                   <font>
                      <Font name="Dubai Regular" size="45.0" />
@@ -22,7 +22,7 @@
                </Label>
                <Label text="Loading...">
                   <VBox.margin>
-                     <Insets left="400.0" top="300.0" />
+                     <Insets left="400.0" top="200.0" />
                   </VBox.margin>
                   <font>
                      <Font name="Dubai Regular" size="28.0" />

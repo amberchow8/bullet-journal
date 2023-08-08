@@ -82,7 +82,7 @@ public class WelcomeController implements ControllerInterface {
             stage.show();
         } else {
             displayWarning("Please provide a path to valid .bujo file, or "
-                    + "a new path to create a new .bujo");
+                    + "a path to create a new .bujo file");
             warning.showAndWait();
         }
     }

@@ -95,22 +95,4 @@ public class Task {
           + "\nStatus: " + status;
     }
   }
-
-  /**
-   * Determines if the url is valid
-   *
-   * @param possiblyUrl the url
-   * @return true if it is valid
-   */
-  public boolean isUrlTask(String possiblyUrl) {
-    URL url;
-    try {
-      url = new URL(possiblyUrl);
-      return true;
-    } catch (MalformedURLException e) {
-      return false;
-    }
-  }
-
-
 }
