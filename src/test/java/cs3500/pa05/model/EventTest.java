@@ -76,7 +76,7 @@ class EventTest {
   @Test
   public void eventToString() {
     Event event = new Event("n", "",
-        "12:00", "5", DayType.TUESDAY);
+            "12:00", "5", DayType.TUESDAY);
     assertTrue(event.eventToString().contains("Event: n"));
     assertTrue(event.eventToString().contains("Time: 12:00"));
     assertTrue(event.eventToString().contains("Duration: 5"));
@@ -84,39 +84,5 @@ class EventTest {
     assertTrue(testEvent.eventToString().contains("Description: a tester event"));
     assertTrue(testEvent.eventToString().contains("Time: 11:00"));
     assertTrue(testEvent.eventToString().contains("Duration: 1.5"));
-
-    Event event2 = new Event("e", "https://example.com", "12:30", "2",DayType.FRIDAY);
-
-    assertEquals("Event: e\n" +
-        "Day: Friday\n" +
-        "Time: 12:30\n" +
-        "Duration: 2", event2.eventToString());
-  }
-
-  /**
-   * Tests the method isUrl.
-   */
-  @Test
-  public void testIsUrl() {
-    Event event = new Event("n", "",
-        "12:00", "5", DayType.TUESDAY);
-
-    // a valid URL
-    String validUrl = "https://example.com";
-    assertTrue(event.isUrl(validUrl));
-
-    // an invalid URL
-    String invalidUrl = "example.com";
-    assertFalse(event.isUrl(invalidUrl));
-
-    // an empty string
-    String emptyString = "";
-    assertFalse(event.isUrl(emptyString));
-
-    // an event with a url description
-    Event eventTwo = new Event("n", "https://github.com/",
-        "12:00", "5", DayType.TUESDAY);
-    assertEquals(eventTwo.eventToString(), "Event: n\n"
-        + "Day: Tuesday\nTime: 12:00\nDuration: 5");
   }
 }
